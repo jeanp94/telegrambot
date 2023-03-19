@@ -1,0 +1,16 @@
+name: Acción de ejemplo
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  envia-mensaje:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Envía mensaje a Telegram
+      uses: appleboy/telegram-action@master
+      with:
+        to: '950880305'
+        token: '5718844506:AAFvCxFpaKXN-cNsmn7hCx7pNnW3Ga9neaw'
+        message: 'Se ha realizado un push en la rama main'
